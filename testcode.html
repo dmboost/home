@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+<script>
+
+function AddRow()
+{
+var FirstName = document.getElementById("firstName").value;
+var LastName = document.getElementById("lastName").value;
+google.script.run.AddRecord(FirstName,LastName);
+document.getElementById("firstName").value = "";
+document.getElementById("lastName").value = "";
+
+}
+
+</script>
+  </head>
+  <body>
+    First Name:<input type="text" id="firstName"/>
+    Last Name:<input type="text" id="lastName"/>
+    <input type="button" value="Add" onclick="AddRow()"/>
+  </body>
+</html>
